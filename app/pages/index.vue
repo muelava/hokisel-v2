@@ -4,12 +4,16 @@
       Nuxt UI - Starter
     </h1>
 
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 p-6">
       <UButton
         label="Documentation"
         icon="i-lucide-square-play"
         to="/kedai/buang-waktu"
       />
     </div>
+    <template>
+  <UBadge>Badge</UBadge>
+</template>
+
   </div>
 </template>
