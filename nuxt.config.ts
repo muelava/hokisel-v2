@@ -2,10 +2,15 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/color-mode'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxtjs/color-mode',
+    '@pinia/nuxt'
+  ],
 
   colorMode:{
-    preference:"light"
+    preference:"light",
   },
 
   css: ['~/assets/css/main.css'],
