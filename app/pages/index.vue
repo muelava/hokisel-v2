@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import CardProductList from "~/components/molecules/CardProductList.vue";
 import Navbar from "~/components/organisms/Navbar.vue";
 
@@ -49,4 +49,5 @@ const products = ref([
     rating: 5.0,
   }
 ]);
+
 </script>
