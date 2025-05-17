@@ -19,6 +19,22 @@ useHead({
   meta: [{ name: "description", content: "Micro Markteplace berisi penjual makanan terdekat" }],
 });
 
+import { ref as dbRef, get } from "firebase/database";
+
+const { $firebaseDb } = useNuxtApp();
+
+// Type-safe access
+const fetchData = async () => {
+  try {
+    const snapshot = await get(dbRef($firebaseDb, 'products'));
+    console.log("Data:", snapshot.val());
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+fetchData()
+
+
 const products = ref([
   {
     sellerId: 1,

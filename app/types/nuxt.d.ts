@@ -1,14 +1,19 @@
 // ~/types/nuxt.d.ts
-import type { Database } from 'firebase/database'
+import { Database } from "firebase/database";
+import { FirebaseApp } from "firebase/app";
 
-declare module '#app' {
+declare module "#app" {
   interface NuxtApp {
-    $rtdb: Database
+    $firebaseApp: FirebaseApp;
+    $firebaseDb: Database;
   }
 }
 
-declare module 'vue' {
+declare module "@vue/runtime-core" {
   interface ComponentCustomProperties {
-    $rtdb: Database
+    $firebaseApp: FirebaseApp;
+    $firebaseDb: Database;
   }
 }
+
+export {};
