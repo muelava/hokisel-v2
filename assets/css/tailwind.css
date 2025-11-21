@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #c720c4;
+    --primary-foreground: 0 0% 100%;
+    --xxs: 0.625rem;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--primary);
+  }
+  .text-xxs {
+    font-size: var(--xxs);
+    line-height: 0.875rem;
+  }
+}
