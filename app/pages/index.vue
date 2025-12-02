@@ -3,7 +3,7 @@
     <p class="text-gray-600 text-sm">Menampilkan <b>10</b> dari hasil pencarian</p>
 
     <div class="grid grid-cols-2 gap-4">
-      <div v-for="i in 5" :key="i" class="shadow-sm rounded-t-xl rounded-b-md">
+      <NuxtLink :to="`/product-${i}`" v-for="i in 5" :key="i" class="shadow-sm rounded-t-xl rounded-b-md">
         <div class="relative rounded-t-xl overflow-hidden">
           <NuxtImg src="https://placehold.co/600x400" alt="Placeholder" format="webp" loading="lazy" fetch-priority="low" class="w-full h-full max-h-40 aspect-square object-cover" />
         </div>
@@ -19,9 +19,15 @@
             <p class="text-gray-500 text-xxs font-normal">1.1 km</p>
           </span>
         </div>
-      </div>
+      </NuxtLink>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: "Hokisel",
+});
+</script>
 
 <style scoped></style>
