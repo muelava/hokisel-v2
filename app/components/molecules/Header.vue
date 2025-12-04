@@ -12,7 +12,7 @@
           <input type="text" placeholder="Ayam Goreng" class="text-sm w-full ps-7 pe-4 focus:outline-none focus:placeholder-gray-500" />
         </div>
         <div class="pb-2 self-end">
-          <NuxtLink to="/cart" class="text-gray-800">
+          <NuxtLink to="/cart" class="text-fuchsia-500">
             <LucideShoppingCart class="h-5 w-auto" />
           </NuxtLink>
         </div>

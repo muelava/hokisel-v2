@@ -9,7 +9,7 @@
         </div>
         <div class="p-2">
           <p class="text-gray-600 text-xs font-normal min-h-[24px] line-clamp-2 mb-0.5">Ayam Goreng Buang Waktu - Anjayani Maknyoos</p>
-          <p class="text-primary text-xs font-bold my-1">Rp 100.000</p>
+          <p class="text-primary text-xs font-bold my-1">Rp 20.000</p>
           <span class="flex items-center text-xxs">
             <LucideStar class="h-3.5 w-auto text-yellow-400 me-0.5" />
             <p class="text-gray-500 text-xxs font-normal">4.5</p>

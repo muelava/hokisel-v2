@@ -1,16 +1,23 @@
 <template>
-  <div>
-    <button class="bg-blue-500 text-white px-4 py-2 rounded-md">
-      {{ label }}
-    </button>
-  </div>
+  <button class="px-4 py-2 rounded-full inline-flex items-center gap-2" :class="variantClass">
+    <span v-if="$slots.left"><slot name="left" /></span>
+    <span><slot /></span>
+    <span v-if="$slots.right"><slot name="right" /></span>
+  </button>
 </template>
 <script>
 export default {
   props: {
-    label: {
+    variant: {
       type: String,
-      default: "Button",
+      default: "primary",
+    },
+  },
+  computed: {
+    variantClass() {
+      return this.variant === "outline"
+        ? "bg-transparent text-fuchsia-600 border border-fuchsia-600"
+        : "bg-fuchsia-600 text-white";
     },
   },
 };
