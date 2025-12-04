@@ -53,7 +53,7 @@
   <!-- footerbar -->
   <NuxtLink to="/cart" class="w-full flex justify-center sticky bottom-0 bg-transparent py-3">
     <AtomsButton class="w-[86%] flex items-center justify-between gap-2 font-bold">
-      Rp 100.000
+      Pesan Sekarang
       <template #right>
         <LucideArrowRight class="h-4 w-auto" />
       </template>
