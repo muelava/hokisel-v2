@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm">
+  <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs">
     <template v-for="(item, index) in items" :key="index">
       <NuxtLink v-if="item.to" :to="item.to" class="text-neutral-500 hover:text-neutral-600 transition-colors">
         {{ item.label }}

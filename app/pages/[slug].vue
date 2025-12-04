@@ -1,7 +1,7 @@
 <template>
   <section class="max-w-3xl mx-auto">
     <div class="px-4">
-      <NuxtLink to="/" class="flex items-center gap-2 text-sm text-fuchsia-500 hover:text-fuchsia-600"><LucideArrowLeft class="h-4 w-auto" /> Kembali</NuxtLink>
+      <NuxtLink to="/" class="flex items-center gap-2 text-xs text-fuchsia-500 hover:text-fuchsia-600"><LucideArrowLeft class="h-3.5 w-auto" />Kembali</NuxtLink>
       <!-- bread crumb -->
       <MoleculesBreadcrumb :items="breadcrumbItems" class="mt-4" />
     </div>
@@ -62,14 +62,16 @@
       </div>
     </div>
   </section>
-  <footer class="w-full flex justify-center sticky bottom-0 bg-transparent py-3">
+
+  <!-- footerbar -->
+  <NuxtLink to="/cart" class="w-full flex justify-center sticky bottom-0 bg-transparent py-3">
     <AtomsButton class="w-[86%] flex items-center justify-between gap-2 font-bold">
       Rp 100.000
       <template #right>
         <LucideArrowRight class="h-4 w-auto" />
       </template>
     </AtomsButton>
-  </footer>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
