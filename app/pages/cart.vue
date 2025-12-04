@@ -1,7 +1,7 @@
 <template>
   <section class="max-w-3xl mx-auto min-h-[90vh]">
     <div class="px-4 py-3">
-      <NuxtLink to="/" class="flex items-center gap-2 text-xs text-fuchsia-500 hover:text-fuchsia-600"><LucideArrowLeft class="h-3.5 w-auto" /> Kembali</NuxtLink>
+      <AtomsBacklink to="/">Kembali</AtomsBacklink>
 
       <!-- Merchant Name -->
       <div class="flex items-center">

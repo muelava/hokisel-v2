@@ -1,7 +1,7 @@
 <template>
   <section class="max-w-3xl mx-auto">
     <div class="px-4">
-      <NuxtLink to="/" class="flex items-center gap-2 text-xs text-fuchsia-500 hover:text-fuchsia-600"><LucideArrowLeft class="h-3.5 w-auto" />Kembali</NuxtLink>
+      <AtomsBacklink to="/">Kembali</AtomsBacklink>
       <!-- bread crumb -->
       <MoleculesBreadcrumb :items="breadcrumbItems" class="mt-4" />
     </div>
