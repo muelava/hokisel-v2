@@ -16,26 +16,8 @@
         </div>
       </div>
 
-      <!-- Cart Item -->
-      <div class="flex items-center gap-4 border-b border-gray-100" v-for="i in 2" :key="i">
-        <div class="p-3 self-start">
-          <p class="text-gray-600 text-xs font-medium min-h-[24px] line-clamp-2 mb-0.5">Ayam Goreng Special Sambal Merah Yuhuu!</p>
-          <p class="text-gray-500 text-xxs font-normal line-clamp-2 mb-0.5">Ayam Goreng + Nasi + Lalaban + Sambal Merah</p>
-          <p class="text-primary text-sm font-bold my-1">Rp 20.000</p>
-        </div>
-        <div class="p-3 self-start">
-          <NuxtImg src="https://placehold.co/600x400" alt="Placeholder" format="webp" loading="lazy" fetch-priority="low" class="w-full h-full max-h-[80px] rounded-xl aspect-square object-cover" />
-          <div class="flex items-center gap-0.5 mt-1 border border-fuchsia-500 rounded-full p-0.5">
-            <button class="border border-fuchsia-500 rounded-full size-4.5 flex items-center justify-center">
-              <LucideMinus class="h-3.5 w-auto text-fuchsia-500" />
-            </button>
-            <input type="text" class="w-8 text-center text-xs" placeholder="1" readonly />
-            <button class="border border-fuchsia-500 rounded-full size-4.5 flex items-center justify-center">
-              <LucidePlus class="h-4 w-auto text-fuchsia-500" />
-            </button>
-          </div>
-        </div>
-      </div>
+      <!-- Product List -->
+      <MoleculesProductItem v-for="i in 2" :key="i" title="Ayam Goreng Special Sambal Merah Yuhuu!" subtitle="Ayam Goreng + Nasi + Lalaban + Sambal Merah" price="Rp 20.000" image-src="https://placehold.co/600x400" />
     </div>
 
     <!-- Cart Total -->
