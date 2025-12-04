@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main class="max-w-7xl mx-auto py-4">
+  <main class="max-w-3xl mx-auto py-4">
     <slot />
   </main>
 </template>

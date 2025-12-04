@@ -1,6 +1,6 @@
 <template>
-  <header class="bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <header class="bg-white sticky top-0 z-10 pb-1">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center gap-4">
         <div class="flex-shrink-0">
           <NuxtLink to="/" class="text-xl font-bold text-gray-800">
@@ -21,14 +21,6 @@
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-};
-</script>
+<script></script>
 
 <style scoped></style>

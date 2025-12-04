@@ -36,12 +36,12 @@
     </div>
 
     <!-- product list -->
-    <MoleculesProductItem v-for="i in 5" :key="i" title="Ayam Goreng Special Sambal Merah Yuhuu!" subtitle="Ayam Goreng + Nasi + Lalaban + Sambal Merah" price="Rp 20.000" image-src="https://placehold.co/600x400" :rating="4.5" rating-label="Rating" />
+    <MoleculesProductItem v-for="i in 5" :key="i" title="Ayam Goreng Special Sambal Merah Yuhuu!" subtitle="Ayam Goreng + Nasi + Lalaban + Sambal Merah" price="Rp 20.000" image-src="https://placehold.co/600x400" :rating="4.5" rating-label="Rating" show-quantity />
   </section>
 
   <!-- footerbar -->
   <NuxtLink to="/cart" class="w-full flex justify-center sticky bottom-0 bg-transparent py-3">
-    <AtomsButton class="w-[86%] flex items-center justify-between gap-2 font-bold">
+    <AtomsButton class="w-full flex items-center justify-between gap-2 font-bold">
       Rp 100.000
       <template #right>
         <LucideArrowRight class="h-4 w-auto" />

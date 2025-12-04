@@ -4,4 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "nuxt-lucide-icons"],
   css: ["@@/assets/css/tailwind.css"],
+  vite: {
+    server: {
+      allowedHosts: [".ngrok-free.app"],
+    },
+  },
 });
