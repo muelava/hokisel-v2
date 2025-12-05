@@ -36,7 +36,7 @@
     </div>
 
     <!-- product list -->
-    <MoleculesProductItem v-for="i in 5" :key="i" title="Ayam Goreng Special Sambal Merah Yuhuu!" subtitle="Ayam Goreng + Nasi + Lalaban + Sambal Merah" price="Rp 20.000" image-src="https://placehold.co/600x400" :rating="4.5" rating-label="Rating" show-quantity />
+    <MoleculesProductItem v-for="product in products" :key="product.id" :title="product.title" :subtitle="product.subtitle" :price="product.price" :image-src="product.image" :rating="product.rating" rating-label="Rating" show-quantity @click="openProductDetail(product)" class="cursor-pointer" />
   </section>
 
   <!-- footerbar -->
@@ -50,7 +50,7 @@
   </NuxtLink>
 
   <!-- Product Detail -->
-  <MoleculesBottomSheetProductDetail />
+  <MoleculesBottomSheetProductDetail :is-open="isBottomSheetOpen" :product="selectedProduct" @close="closeProductDetail" />
 </template>
 
 <script setup lang="ts">
@@ -61,6 +61,88 @@ useHead({
 });
 
 const breadcrumbItems = computed(() => [{ label: "Home", to: "/" }, { label: route.params.slug as string }]);
+
+const isBottomSheetOpen = ref(false);
+const selectedProduct = ref(null);
+
+const products = ref([
+  {
+    id: 1,
+    title: "Ayam Goreng Special Sambal Merah",
+    subtitle: "Ayam Goreng + Nasi + Lalaban + Sambal Merah",
+    price: "Rp 20.000",
+    originalPrice: "Rp 100.000",
+    discount: "80%",
+    image: "https://placehold.co/600x400",
+    rating: 4.5,
+    sold: 100,
+    merchantName: "Kedai Ayam Goreng",
+  },
+  {
+    id: 2,
+    title: "Ayam Goreng Crispy Pedas",
+    subtitle: "Ayam Goreng Crispy + Nasi + Sambal Pedas",
+    price: "Rp 25.000",
+    originalPrice: "Rp 120.000",
+    discount: "75%",
+    image: "https://placehold.co/600x400",
+    rating: 4.8,
+    sold: 150,
+    merchantName: "Kedai Ayam Goreng",
+  },
+  {
+    id: 3,
+    title: "Ayam Goreng Mentega",
+    subtitle: "Ayam Goreng + Nasi + Saus Mentega",
+    price: "Rp 30.000",
+    originalPrice: "Rp 150.000",
+    discount: "70%",
+    image: "https://placehold.co/600x400",
+    rating: 4.6,
+    sold: 80,
+    merchantName: "Kedai Ayam Goreng",
+  },
+  {
+    id: 4,
+    title: "Ayam Goreng Bumbu Bali",
+    subtitle: "Ayam Goreng + Nasi + Bumbu Bali",
+    price: "Rp 28.000",
+    originalPrice: "Rp 140.000",
+    discount: "72%",
+    image: "https://placehold.co/600x400",
+    rating: 4.7,
+    sold: 120,
+    merchantName: "Kedai Ayam Goreng",
+  },
+  {
+    id: 5,
+    title: "Ayam Goreng Geprek",
+    subtitle: "Ayam Goreng Geprek + Nasi + Sambal Extra Pedas",
+    price: "Rp 22.000",
+    originalPrice: "Rp 110.000",
+    discount: "78%",
+    image: "https://placehold.co/600x400",
+    rating: 4.9,
+    sold: 200,
+    merchantName: "Kedai Ayam Goreng",
+  },
+]);
+
+const openProductDetail = (product: any) => {
+  console.log;
+  selectedProduct.value = product;
+  isBottomSheetOpen.value = true;
+  document.body.style.overflow = "hidden";
+};
+
+const closeProductDetail = () => {
+  isBottomSheetOpen.value = false;
+  document.body.style.overflow = "";
+};
+
+onUnmounted(() => {
+  document.body.style.overflow = "";
+});
 </script>
 
 <style scoped></style>
