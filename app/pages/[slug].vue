@@ -48,6 +48,9 @@
       </template>
     </AtomsButton>
   </NuxtLink>
+
+  <!-- Product Detail -->
+  <MoleculesBottomSheetProductDetail />
 </template>
 
 <script setup lang="ts">
